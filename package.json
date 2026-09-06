@@ -1,0 +1,25 @@
+{
+  "name": "softn-last-sound",
+  "version": "0.3.0",
+  "private": true,
+  "description": "LAST SOUND: Below the Call. A fully voiced first-person survey of a blood ocean from inside a sealed pressure hull, for SoftN. An unofficial Iron Lung fan story.",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/f2i-com/softn-LastSound.git"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "test": "node scripts/check.cjs",
+    "build": "node scripts/build.cjs",
+    "validate": "node tools/test-bundle.cjs dist/LastSound3D.softn",
+    "release:check": "npm test && npm run build && npm run validate",
+    "install-into": "node scripts/install-into-softn.cjs",
+    "uninstall-from": "node scripts/uninstall-from-softn.cjs"
+  },
+  "devDependencies": {
+    "fflate": "^0.8.3"
+  }
+}
